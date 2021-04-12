@@ -1,0 +1,11 @@
+[user]
+	name = Julien Chiron
+	email = julien.chiron@gmail.com
+[core]
+    editor = vim
+[alias]
+    co = checkout
+    ci = commit -a
+    f = fetch
+    st = status
+    l = log
