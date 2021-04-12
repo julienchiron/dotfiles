@@ -28,8 +28,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+" If the list is modified, run :PluginInstall
 
 "execute pathogen#infect()
+
+" Disable backups, we have source control for that
+set nobackup
 
 " disable swap
 set noswapfile
@@ -76,6 +80,13 @@ set shiftwidth=4
 set tabstop=4
 
 set hlsearch
+
+" Wrap on column 80
+set textwidth=79
+set colorcolumn=+1
+
+" Highlight current line
+set cursorline
 
 """"""""""""""""""""""""""""""
 " => Status line
