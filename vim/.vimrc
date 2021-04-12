@@ -1,4 +1,38 @@
-execute pathogen#infect()
+""""""""""""""""""""""""""""""""""""""""""""""""""
+"Description:
+"   This is the .vimrc file
+"
+"Maintainer:
+"   Julien Chiron
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Install vim-plug if we don't already have it
+" Credit to github.com/captbaritone
+if empty(glob("~/.vim/autoload/plug.vim"))
+    " Ensure all needed directories exist  (Thanks @kapadiamush)
+    execute '!mkdir -p ~/.vim/plugged'
+    execute '!mkdir -p ~/.vim/autoload'
+    " Download the actual plugin manager
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+"execute pathogen#infect()
+
+" disable swap
+set noswapfile
 
 " Colors
 set background=dark
