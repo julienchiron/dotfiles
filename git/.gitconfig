@@ -7,5 +7,8 @@
     co = checkout
     ci = commit -a
     f = fetch
-    st = status
     l = log
+    ps = push
+    pl = pull
+[init]
+	defaultBranch = main

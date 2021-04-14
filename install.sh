@@ -17,3 +17,12 @@ then
 fi
 
 ln -nfs $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
+
+if [ -f $HOME/.bashrc ]
+then
+    mv $HOME/.bashrc $HOME/.bashrc-backup
+fi
+
+ln -nfs $HOME/.dotfiles/bash/.bashrc $HOME/.bashrc
+
+
