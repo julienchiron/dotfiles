@@ -10,5 +10,6 @@
     l = log
     ps = push
     pl = pull
+    s = status
 [init]
 	defaultBranch = main
