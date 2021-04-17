@@ -41,6 +41,7 @@ set noswapfile
 " Colors
 set background=dark
 colorscheme molokai 
+" Install with curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > ~/.vim/colors/molokai.vim
 
 " Vi retro compatibility
 set nocompatible
