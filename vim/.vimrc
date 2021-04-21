@@ -26,11 +26,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'gruvbox-community/gruvbox'
+Plug 'puremourning/vimspector'
 
 call plug#end()
 " If the list is modified, run :PluginInstall
-
-"execute pathogen#infect()
 
 " Disable backups, we have source control for that
 set nobackup
@@ -40,14 +40,14 @@ set noswapfile
 
 " Colors
 set background=dark
-colorscheme molokai 
-" Install with curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > ~/.vim/colors/molokai.vim
+colorscheme gruvbox 
 
 " Vi retro compatibility
 set nocompatible
 
 " Show line numbering
 set number
+set relativenumber
 
 " Enable filetype plugins
 filetype plugin on
