@@ -6,6 +6,12 @@
 "   Julien Chiron
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+syntax on
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -33,6 +39,13 @@ Plug 'szw/vim-maximizer'
 call plug#end()
 " If the list is modified, run :PluginInstall
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set list                                                                     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Backspace
+set backspace=indent,eol,start
+
 " Split setup
 set splitbelow
 set splitright
@@ -56,12 +69,6 @@ set nocompatible
 " Show line numbering
 set number
 set relativenumber
-
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-syntax on
 
 " Sets how many lines of history VIM has to remember
 set history=700
@@ -89,7 +96,13 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-set hlsearch
+" Show invisible chars
+set list
+set listchars=tab:→-,precedes:«,extends:»,eol:¬
+
+" Search highlighting
+set nohlsearch
+set incsearch
 
 " Wrap on column 80
 set textwidth=79
@@ -104,10 +117,10 @@ let g:netrw_listsize = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * :Vexplore
-augroup END
+"augroup ProjectDrawer
+"    autocmd!
+"    autocmd VimEnter * :Vexplore
+"augroup END
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -139,7 +152,7 @@ let mapleader = " "
 map ù %
 
 " Edit .vimrc
-nnoremap <leader>vr :e ~/.vimrc<CR>
+nnoremap <leader>vr :tabnew<CR>:e ~/.vimrc<CR>
 
 " Vimspector
 "
