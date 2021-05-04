@@ -34,14 +34,22 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'gruvbox-community/gruvbox'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'mbbill/undotree'
+Plug 'jremmen/vim-ripgrep'
 
 call plug#end()
 " If the list is modified, run :PluginInstall
 
+" RipGrep
+"if executable('rg')
+"    let g:rg_derive_root='true'
+"endif
+"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc--exclude-standard']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set list                                                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nowrap
 
 " Backspace
 set backspace=indent,eol,start
@@ -50,14 +58,15 @@ set backspace=indent,eol,start
 set splitbelow
 set splitright
 
-" Disable backups, we have source control for that
-set nobackup
 
 " Set encoding to utf-8
 set encoding=utf-8
 
-" disable swap
+" disable swapfile and backup
 set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 
 " Colors
 set background=dark
@@ -86,15 +95,13 @@ set ruler
 " Height of the command bar
 set cmdheight=1
 
-" Use spaces instead of tabs
+" Tab and indent settings
 set expandtab
-
-" Be smart when using tabs ;)
 set smarttab
-
-" 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
+set smartindent
 
 " Show invisible chars
 set list
@@ -110,6 +117,8 @@ set colorcolumn=+1
 
 " Highlight current line
 set cursorline
+
+set noerrorbells
 
 " NetRW settings
 let g:netrw_banner = 0
@@ -184,10 +193,14 @@ nmap <leader>drc <Plug>VimspectorRunToCursor
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 
-" Split Navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" Window Navigation
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
+nnoremap <leader>pv :wincmd v <bar> :wincmd r <bar> :Ex <bar> :vertical resize 30<CR>
 
+" YCM
+nnoremap <silent> <leader>gd :YcmCompleter CoTo<CR>
+nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>

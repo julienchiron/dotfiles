@@ -8,6 +8,7 @@ alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -aG'
 alias python=python3
+alias py=python
 
 alias wh='whois $(pbpaste)'
 
@@ -19,6 +20,11 @@ alias sdep='ssh RMN-Pro@172.16.51.124'
 alias vb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
 alias vv='vim ~/.vimrc'
+
+# Django shortcuts
+alias djr='python manage.py runserver'
+alias djm='python manage.py migrate'
+alias djmk='python manage.py makemigrations'
 
 JAUNE="\[\e[33;40m\]" #"\033[0;33;40m"
 VERT="\[\e[32;40m\]" #"\033[0;32;40m"
