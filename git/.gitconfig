@@ -1,15 +1,15 @@
 [user]
-	name = Julien Chiron
-	email = julien.chiron@gmail.com
+    name = Julien Chiron
+    email = julien.chiron@gmail.com
 [core]
     editor = vim
 [alias]
     co = checkout
-    ci = commit -a
+    ci = commit
     f = fetch
     l = log
     ps = push
     pl = pull
     s = status
 [init]
-	defaultBranch = main
+    defaultBranch = main
