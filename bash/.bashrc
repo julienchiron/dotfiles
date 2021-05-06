@@ -7,8 +7,11 @@
 alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -aG'
+
+# Python shortcuts
 alias python=python3
 alias py=python
+alias va='source myvenv/bin/activate'
 
 alias wh='whois $(pbpaste)'
 
