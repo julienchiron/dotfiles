@@ -202,5 +202,5 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>pv :wincmd v <bar> :wincmd r <bar> :Ex <bar> :vertical resize 30<CR>
 
 " YCM
-nnoremap <silent> <leader>gd :YcmCompleter CoTo<CR>
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
