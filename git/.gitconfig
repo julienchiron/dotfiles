@@ -8,8 +8,11 @@
     ci = commit
     f = fetch
     l = log
+    g = log --oneline --graph --all --decorate
     ps = push
     pl = pull
     s = status
+    sw = switch
+    b = branch
 [init]
     defaultBranch = main
