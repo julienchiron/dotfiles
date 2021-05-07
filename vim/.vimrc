@@ -199,8 +199,13 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-nnoremap <leader>pv :wincmd v <bar> :wincmd r <bar> :Ex <bar> :vertical resize 30<CR>
+" Buffers Navigation
+nnoremap <leader>b :ls<CR>
+
+"nnoremap <leader>pv :wincmd v <bar> :wincmd r <bar> :Ex <bar> :vertical resize 30<CR>
 
 " YCM
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+
+let g:ycm_autoclose_preview_window_after_completion = 1
