@@ -7,7 +7,7 @@
     co = checkout
     ci = commit
     f = fetch
-    l = log
+    l = log --oneline
     g = log --oneline --graph --all --decorate
     ps = push
     pl = pull

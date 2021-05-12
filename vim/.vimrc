@@ -50,6 +50,7 @@ call plug#end()
 " Set list                                                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nowrap
+set hidden
 
 " Backspace
 set backspace=indent,eol,start
@@ -112,8 +113,8 @@ set nohlsearch
 set incsearch
 
 " Wrap on column 80
-set textwidth=79
-set colorcolumn=+1
+set textwidth=0
+set colorcolumn=80
 
 " Highlight current line
 set cursorline
@@ -193,6 +194,9 @@ nmap <leader>drc <Plug>VimspectorRunToCursor
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 
+" Tabs Navigation
+nnoremap <leader>tn :tabNext<CR>
+
 " Window Navigation
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -205,7 +209,13 @@ nnoremap <leader>b :ls<CR>
 "nnoremap <leader>pv :wincmd v <bar> :wincmd r <bar> :Ex <bar> :vertical resize 30<CR>
 
 " YCM
-nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gt :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
 
-let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1 " Close this damn widndow!
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
