@@ -5,12 +5,16 @@
 " Maintainer:
 "   Julien Chiron
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" External sources
+source ~/.dotfiles/vim/snippets.vim " All the snippets you need
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 
 syntax on
+
+set path+=**
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -160,6 +164,7 @@ endfunction
 let mapleader = " "
 
 map ù %
+nnoremap <NL> i<CR><ESC> " break the line
 
 " Edit .vimrc
 nnoremap <leader>vr :tabnew<CR>:e ~/.vimrc<CR>
@@ -212,6 +217,7 @@ nnoremap <leader>b :ls<CR>
 nnoremap <silent> <leader>gt :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 nnoremap <silent> <leader>gd :YcmCompleter GetDoc<CR>
+nnoremap <leader>yr :YcmRestartServer<CR>
 
 let g:ycm_autoclose_preview_window_after_completion = 1 " Close this damn widndow!
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
@@ -219,3 +225,4 @@ let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
 let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
+let g:ycm_extra_conf_globlist = 0 " Don't ask confirmation upon loading
