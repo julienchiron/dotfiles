@@ -6,7 +6,7 @@
 "   Julien Chiron                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " html snippets
-nnoremap ,html :read %:p:h/snippets/html/html.snip<CR>7jwf>a
+nnoremap ,html :read ~/.dotfiles/vim/snippets/html/html.snip<CR>7jwf>a
 nnoremap ,h1 a<h1></h1><ESC>2ba
 nnoremap ,h2 a<h2></h2><ESC>2ba
 nnoremap ,h3 a<h3></h3><ESC>2ba
