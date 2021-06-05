@@ -30,6 +30,9 @@ alias djr='python manage.py runserver'
 alias djm='python manage.py migrate'
 alias djmk='python manage.py makemigrations'
 
+# Coverage.py shortcuts
+alias coh='coverage run manage.py test;coverage html;open htmlcov/index.html;'
+
 JAUNE="\[\e[33;40m\]" #"\033[0;33;40m"
 VERT="\[\e[32;40m\]" #"\033[0;32;40m"
 CYAN="\[\e[36;40m\]"

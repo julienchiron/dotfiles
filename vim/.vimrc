@@ -36,6 +36,7 @@ Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'mbbill/undotree'
 Plug 'davidhalter/jedi-vim'
+Plug 'ervandew/supertab'
 
 call plug#end()
 " If the list is modified, run :PluginInstall
