@@ -37,6 +37,7 @@ Plug 'szw/vim-maximizer'
 Plug 'mbbill/undotree'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
+Plug 'universal-ctags/ctags'
 
 call plug#end()
 " If the list is modified, run :PluginInstall
@@ -81,6 +82,7 @@ set cursorline
 set noerrorbells
 set laststatus=2 " Always show the status line
 set showcmd "show typed keys in status bar
+set complete-=i "Don't scan include files that slows autocompletion
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NetRW Settings                                                               "
@@ -159,6 +161,8 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
+let g:jedi#show_call_signatures = 2
+let g:jedi#popup_on_dot = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fugitive Settings                                                            "
@@ -169,4 +173,9 @@ nmap <leader>gc :G commit<CR>
 nmap <leader>gl :G log --oneline<CR>
 nmap <leader>gs :G status<CR>
 nmap <leader>gg :G<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Supertabs Settings                                                            "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SuperTabDefaultCompletionType = "context"
 
