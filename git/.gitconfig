@@ -16,3 +16,4 @@
     b = branch
 [init]
     defaultBranch = main
+    templatedir = ~/.dotfiles/git/.git_template
