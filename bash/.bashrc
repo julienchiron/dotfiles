@@ -6,7 +6,7 @@
 
 alias ls='ls -G'
 alias ll='ls -lG'
-alias la='ls -aG'
+alias la='ls -laG'
 
 # Python shortcuts
 alias python=python3
@@ -45,3 +45,5 @@ parse_git_branch() {
 }
 
 export PS1="$VERT\u$CYAN@\h$JAUNE:\W $ROUGE\$(parse_git_branch)\n$NC$  "
+export BASH_SILENCE_DEPRECATION_WARNING=1”
+
