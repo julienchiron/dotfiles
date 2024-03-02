@@ -25,4 +25,11 @@ fi
 
 ln -nfs $HOME/.dotfiles/bash/.bashrc $HOME/.bashrc
 
+if [ -f $HOME/.bash_profile ]
+then
+    mv $HOME/.bash_profile $HOME/.bash_profile-backup
+fi
+
+ln -nfs $HOME/.dotfiles/bash/.bash_profile $HOME/.bash_profile
+
 
