@@ -7,6 +7,7 @@
 alias ls='ls -G'
 alias ll='ls -lG'
 alias la='ls -laG'
+alias v='vim'
 
 # Python shortcuts
 alias python=python3
