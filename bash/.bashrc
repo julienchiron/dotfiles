@@ -16,11 +16,6 @@ alias va='source myvenv/bin/activate'
 
 alias wh='whois $(pbpaste)'
 
-# SSH shortcuts
-alias s400='ssh nmr2@172.16.51.134'
-alias s300='ssh nmr@172.16.51.133'
-alias sdep='ssh RMN-Pro@172.16.51.124'
-
 # Config Files Shortcuts
 alias vb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
@@ -48,3 +43,7 @@ parse_git_branch() {
 export PS1="$VERT\u$CYAN@\h$JAUNE:\W $ROUGE\$(parse_git_branch)\n$NC$  "
 export BASH_SILENCE_DEPRECATION_WARNING=1”
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
