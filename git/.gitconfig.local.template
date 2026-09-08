@@ -1,0 +1,10 @@
+# Local, untracked Git identity.
+# install.sh copies this to ~/.gitconfig.local if that file does not exist yet.
+# Edit ~/.gitconfig.local with your details — this file is only a template.
+#
+# Tip: to keep your address out of commit metadata, use the GitHub noreply
+# address from Settings > Emails > "Keep my email addresses private", e.g.
+#   email = 1234567+username@users.noreply.github.com
+[user]
+    name = Your Name
+    email = you@example.com

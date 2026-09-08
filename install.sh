@@ -11,6 +11,13 @@ fi
 
 ln -nfs $HOME/.dotfiles/git/.gitconfig $HOME/.gitconfig
 
+# Local Git identity (untracked): created from the template on first install
+if [ ! -f $HOME/.gitconfig.local ]
+then
+    cp $HOME/.dotfiles/git/.gitconfig.local.template $HOME/.gitconfig.local
+    echo "Created ~/.gitconfig.local - edit it to set your name and email."
+fi
+
 if [ -f $HOME/.vimrc ]
 then
     mv $HOME/.vimrc $HOME/.vimrc-backup

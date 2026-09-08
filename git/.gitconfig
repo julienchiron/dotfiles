@@ -1,6 +1,6 @@
-[user]
-    name = Julien Chiron
-    email = 82217060+julienchiron@users.noreply.github.com
+# Identity lives in an untracked local file (see git/.gitconfig.local.template).
+[include]
+    path = ~/.gitconfig.local
 [core]
     editor = vim
 [alias]
