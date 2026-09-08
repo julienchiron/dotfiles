@@ -32,4 +32,12 @@ fi
 
 ln -nfs $HOME/.dotfiles/bash/.bash_profile $HOME/.bash_profile
 
+# Claude skills
+mkdir -p $HOME/.claude
 
+if [ -e $HOME/.claude/skills ] && [ ! -L $HOME/.claude/skills ]
+then
+    mv $HOME/.claude/skills $HOME/.claude/skills-backup
+fi
+
+ln -nfs $HOME/.dotfiles/claude/skills $HOME/.claude/skills
