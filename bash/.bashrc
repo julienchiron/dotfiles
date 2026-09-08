@@ -41,7 +41,7 @@ parse_git_branch() {
 }
 
 export PS1="$VERT\u$CYAN@\h$JAUNE:\W $ROUGE\$(parse_git_branch)\n$NC$  "
-export BASH_SILENCE_DEPRECATION_WARNING=1”
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
 export NVM_DIR="$HOME/.nvm"
