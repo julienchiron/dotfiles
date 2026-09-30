@@ -12,7 +12,7 @@ alias v='vim'
 # Python shortcuts
 alias python=python3
 alias py=python
-alias va='source myvenv/bin/activate'
+alias va='source .venv/bin/activate'
 
 alias wh='whois $(pbpaste)'
 
@@ -25,6 +25,7 @@ alias vv='vim ~/.vimrc'
 alias djr='python manage.py runserver'
 alias djm='python manage.py migrate'
 alias djmk='python manage.py makemigrations'
+alias djrr='cd frontend && npm run build && cd .. && djr'
 
 # Coverage.py shortcuts
 alias coh='coverage run manage.py test;coverage html;open htmlcov/index.html;'

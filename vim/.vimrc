@@ -38,6 +38,7 @@ Plug 'mbbill/undotree'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'universal-ctags/ctags'
+Plug 'skanehira/preview-markdown.vim'
 
 call plug#end()
 " If the list is modified, run :PluginInstall
@@ -178,4 +179,10 @@ nmap <leader>gg :G<CR>
 " Supertabs Settings                                                            "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "context"
+
+"""
+" MarkDown Preview
+"""
+let g:preview_markdown_parser = "glow"
+let g:preview_markdown_auto_update = 1
 

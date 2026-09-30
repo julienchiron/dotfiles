@@ -37,23 +37,29 @@ on note en une ligne, on priorise plus tard.
 
      Légende d'état : ✅ terminé · 🔸 en cours · ⬜ à faire · ⏸️ suspendu
 
+     Chaque idée porte un identifiant `ID-xx` stable et croissant. Ne pas réutiliser
+     un `ID` libéré : la prochaine idée prend toujours le numéro suivant le plus haut.
+
      ## Idées
 
-     - ⬜ <idée reformulée>
+     - **ID-01** ⬜ <idée reformulée>
      ```
 
    - **S'il existe**, ajouter une nouvelle puce à la fin de la section `## Idées`,
      en conservant le format des lignes déjà présentes. Ne pas réécrire ni
      réordonner les idées existantes.
 
-3. **Format d'une entrée** : puce commençant par l'icône d'état `⬜` (à faire),
+3. **Format d'une entrée** : puce `- **ID-xx** <icône> <texte>`, où `ID-xx` est le
+   numéro suivant le plus haut déjà présent dans le fichier (formaté sur deux
+   chiffres, ex. `ID-07`), et l'icône d'état est `⬜` (à faire) par défaut,
    cohérente avec la légende du fichier (et, s'il y en a un, celle du backlog /
-   cahier des charges du projet). Détails éventuels en sous-puces indentées de
+   cahier des charges du projet). Si le fichier ne numérote pas encore ses
+   entrées, commencer à `ID-01`. Détails éventuels en sous-puces indentées de
    deux espaces.
 
    ```markdown
-   - ⬜ Utiliser la watchlist IBKR à la place du pont Google Sheet pour les
-     cotations en différé.
+   - **ID-13** ⬜ Utiliser la watchlist IBKR à la place du pont Google Sheet pour
+     les cotations en différé.
    ```
 
 4. **Ne rien faire d'autre** : pas de commit, pas de mise à jour du backlog ou
@@ -62,16 +68,16 @@ on note en une ligne, on priorise plus tard.
 
 ## Exemples
 
-**Exemple 1**
+**Exemple 1** (dernier ID du fichier = `ID-12`)
 Entrée : « note une idée : on pourrait exporter le journal des trades en CSV »
-Action : ajouter `- ⬜ Exporter le journal des trades en CSV.` à la section
-`## Idées`.
+Action : ajouter `- **ID-13** ⬜ Exporter le journal des trades en CSV.` à la fin
+de la section `## Idées`.
 
-**Exemple 2**
+**Exemple 2** (dernier ID du fichier = `ID-13`)
 Entrée : « pense pour plus tard à un mode sombre, mais seulement si Tailwind le
 gère proprement »
 Action :
 ```markdown
-- ⬜ Ajouter un mode sombre.
+- **ID-14** ⬜ Ajouter un mode sombre.
   - Seulement si la gestion via Tailwind reste propre (pas de surcharge CSS lourde).
 ```
